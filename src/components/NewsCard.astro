@@ -1,0 +1,28 @@
+---
+const { title, summary, link } = Astro.props;
+---
+
+<article class="news-card">
+  <h2><a href={link}>{title}</a></h2>
+  <p>{summary}</p>
+</article>
+
+<style>
+  .news-card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    transition: box-shadow 0.3s;
+    width: fit-content;
+  }
+  .news-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .news-card h2 {
+    margin: 0;
+  }
+  .news-card p {
+    margin: 0.5rem 0 0;
+  }
+</style>

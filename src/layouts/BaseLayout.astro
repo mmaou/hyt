@@ -1,0 +1,52 @@
+---
+// 包含头部和脚部组件
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新闻资讯网站</title>
+  <!-- <link rel="stylesheet" href="/styles/global.css"> -->
+</head>
+<body>
+  <Header />
+  <main>
+    <slot />
+  </main>
+  <Footer />
+</body>
+<style>
+  body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f0f8ff;
+  color: #333;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0.5rem 0;
+}
+
+main {
+  padding: 1rem;
+}
+
+a {
+  color: #1e90ff;
+}
+
+a:hover {
+  color: #104e8b;
+  text-decoration: underline;
+}
+
+</style>
+</html>
